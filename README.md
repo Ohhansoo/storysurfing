@@ -7,7 +7,9 @@
 - 유혜림 : 서기, 팀원, 프론트앤드, 백엔드
 - 유한결 : 팀원, 프론트앤드, 백엔드
 - 송인효 : 팀원, 프론트앤드, 백엔드
+
 <br>
+
 > #### 프로젝트 상세
 - 사이트 : <a href="https://www.notion.so/SPING-00c183a91e1d40caaefccf309896feaa" target="_blank"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/></a>
 
@@ -30,6 +32,7 @@
 : 시스템 구조도 작성, 기능 정의, 상세자료입력, 테이블 스키마, ERD 작성, UI 설계, 네이밍 규칙, 구현, 배포
 
 <br>
+
 > #### 프로젝트 기능   
 
 
