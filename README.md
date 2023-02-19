@@ -1,5 +1,3 @@
-# storysurfing
-
 ## ⊙ SPING
 
 > #### 팀원
