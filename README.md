@@ -62,7 +62,7 @@
 <br>
 
 > #### 개발환경 
-- Language : Java, JavaScript(JQuery : jquery-3.6.0), HTML, CSS<br>
+- Language : Java, JavaScript, HTML, CSS<br>
 - DB : Oracle<br>
 - DB관리툴 : DBeaver <br>
 - 서버 : apache - 9.0.1<br>
