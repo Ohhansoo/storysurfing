@@ -37,14 +37,12 @@ dependencies {
 	implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	runtimeOnly("com.mysql:mysql-connector-j")
 	runtimeOnly("com.mysql:mysql-connector-java")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
-
-	// https://mvnrepository.com/artifact/com.jcraft/jsch
-	implementation("com.jcraft:jsch:0.1.55")
 }
 
 tasks.withType<Test> {
