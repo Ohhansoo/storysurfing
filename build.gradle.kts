@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+//	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 	implementation("org.springframework.boot:spring-boot-starter-security")
@@ -28,21 +28,16 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
-	implementation("mysql:mysql-connector-java:8.0.28")
-	testImplementation("junit:junit:4.13.1")
 	compileOnly("org.projectlombok:lombok")
-	compileOnly("com.jcraft:jsch:0.1.55");
-//	implementation("com.jcraft:jsch:0.1.55")
-	// https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api
-	implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
-
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
-	runtimeOnly("com.mysql:mysql-connector-j")
-	runtimeOnly("com.mysql:mysql-connector-java")
+//	runtimeOnly("com.mysql:mysql-connector-j")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
+
+	// https://mvnrepository.com/artifact/com.jcraft/jsch
+	implementation("com.jcraft:jsch:0.1.55")
 }
 
 tasks.withType<Test> {
