@@ -1,14 +1,13 @@
 package DataSource;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
+@ToString
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="Post")
 public class Posts {
