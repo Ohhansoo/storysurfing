@@ -31,11 +31,14 @@ dependencies {
 	implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
 	implementation("mysql:mysql-connector-java:8.0.28")
+//	implementation("mysql:mysql-connector-java")
 	testImplementation("junit:junit:4.13.1")
 	compileOnly("org.projectlombok:lombok")
 	compileOnly("com.jcraft:jsch:0.1.55");
 	// https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api
 	implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
+// https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+	implementation("javax.xml.bind:jaxb-api:2.3.1")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
