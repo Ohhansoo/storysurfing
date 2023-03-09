@@ -57,18 +57,6 @@ dependencies {
 
 }
 
-buildscript {
-	repositories {
-		mavenCentral()
-	}
-
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.2.RELEASE")
-		classpath("org.hidetake:gradle-ssh-plugin:2.2.0")
-	}
-}
-
-//apply plugin("org.hidetake.ssh")
 
 tasks.withType<Test> {
 	useJUnitPlatform()
