@@ -21,23 +21,23 @@ public class DatabaseConfig {
 //    @Autowired
     private ApplicationContext context;
 
-/*    @Bean
+    @Bean(name = "dataSource")
     @ConfigurationProperties(prefix = "spring.datasource.hikari")
        public HikariConfig hikariConfig() {
         return new HikariConfig();
-    }*/
+    }
 
-/*    @Bean
-    public DataSource dataSource() {
-        return new HikariDataSource(hikariConfig());
-    }*/
-
+//    @Bean
+//    public DataSource dataSource() {
+//        return new HikariDataSource(hikariConfig());
+//    }
+//
 //    @Bean
 //    public SqlSessionFactory sqlSessionFactory() throws Exception {
 //        SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
 //       factoryBean.setDataSource(dataSource());
 //		factoryBean.setMapperLocations(applicationContext.getResources("classpath:/mappers/**/*Mapper.xml"));
- //       return factoryBean.getObject();
+//        return factoryBean.getObject();
 //    }
 
 /*    @Bean

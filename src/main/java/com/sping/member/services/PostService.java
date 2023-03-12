@@ -1,4 +1,4 @@
-package com.sping.services;
+package com.sping.member.services;
 
 import com.sping.DataSource.DTO.PostSaveRequestDTO;
 import com.sping.Repository.PostRepository;

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              version="2.1">
-    <persistence-unit name="sping">
-        <class>DataSource.Posts</class>
+    <persistence-unit name="post">
+        <class>com.sping.Repository.Post</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="admin"/>
-            <property name="javax.persistence.jdbc.password" value="1q2w#e$r"/>
+            <property name="javax.persistence.jdbc.password" value="1q2w#e$rA"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://43.201.122.223:3306/sping?characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>
