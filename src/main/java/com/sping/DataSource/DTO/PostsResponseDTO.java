@@ -1,6 +1,6 @@
 package com.sping.DataSource.DTO;
 
-import com.sping.Repository.Posts;
+import com.sping.Repository.Post;
 
 public class PostsResponseDTO {
     private Long id;
@@ -8,7 +8,7 @@ public class PostsResponseDTO {
     private String contents;
     private String author;
 
-    public PostsResponseDTO(Posts entity){
+    public PostsResponseDTO(Post entity){
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.contents = entity.getContent();

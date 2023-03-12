@@ -23,6 +23,7 @@ public class SpingApplication {
         SpringApplication app = new SpringApplication(SpringBootApplication.class);
         app.setWebApplicationType(WebApplicationType.NONE);
         app.run(args);
+
     }
 
     @PreDestroy

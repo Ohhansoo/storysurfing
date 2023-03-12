@@ -1,6 +1,6 @@
 package com.sping.DataSource.DTO;
 
-import com.sping.Repository.Posts;
+import com.sping.Repository.Post;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,8 +19,8 @@ public class PostSaveRequestDTO {
         this.author = author;
     }
 
-    public Posts toEntity(){
-        return Posts.builder()
+    public Post toEntity(){
+        return Post.builder()
                 .title(title)
                 .content(content)
                 .author(author)

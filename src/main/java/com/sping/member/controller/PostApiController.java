@@ -1,7 +1,7 @@
-package com.sping;
+package com.sping.member.controller;
 
 import com.sping.DataSource.DTO.PostSaveRequestDTO;
-import com.sping.services.PostService;
+import com.sping.member.services.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
