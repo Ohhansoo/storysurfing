@@ -1,15 +1,15 @@
-import './App.css';
+import './styles/App.css';
 // import Hello from "../src/component/Hello";
 // import Welcome from "../src/component/Welcome";
 // import styles from "./App.module.css";
 // import ChangeName from "./component/ChangeName";
-import DayList from "./component/DayList";
-import Day from "./component/Day";
-import Header from "./component/Header";
-import EmptyPage from "./component/EmptyPage";
+import DayList from "./components/DayList";
+import Day from "./components/Day";
+import Header from "./components/Header";
+import EmptyPage from "./components/EmptyPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CreateWord from "./component/CreateWord";
-import CreateDay from "./component/CreateDay";
+import CreateWord from "./components/CreateWord";
+import CreateDay from "./components/CreateDay";
 function App() {
     return (
         <BrowserRouter>

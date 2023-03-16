@@ -1,4 +1,4 @@
-package DataSource;
+package dataSource;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
