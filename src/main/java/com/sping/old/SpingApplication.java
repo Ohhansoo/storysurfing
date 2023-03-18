@@ -7,14 +7,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpingApplication {
-    private static SshTunneling tunnel;
+//    private static SshTunneling tunnel;
     public SpingApplication() {
-        tunnel = new SshTunneling().init( res->{
-            if(!res) {
-                System.out.println("포트포워딩 실패, 프로그램을 종료 합니다.");
-                System.exit(0);
-            }
-        });
+//        tunnel = new SshTunneling().init( res->{
+//            if(!res) {
+//                System.out.println("포트포워딩 실패, 프로그램을 종료 합니다.");
+//                System.exit(0);
+//            }
+//        });
     }
     public static void main(String[] args) {
 //        SpringApplication.run(SpingApplication.class, args);
@@ -26,9 +26,10 @@ public class SpingApplication {
     }
 
     @PreDestroy
+    @Deprecated
     public void end() {
         try {
-            tunnel.closeSSH();
+//            tunnel.closeSSH();
         } catch (Exception e) {
             e.printStackTrace();
         }
