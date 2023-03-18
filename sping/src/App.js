@@ -14,7 +14,7 @@ function App() {
     return (
         <BrowserRouter>
             <div className="App">
-                <Header/>
+              {/*  <Header/>
                 <Routes>
                     <Route path="/" element={<DayList/>} />
                     <Route path="/day/:day" element={<Day/>} />
@@ -22,7 +22,8 @@ function App() {
                     <Route path="/create_day" element={<CreateDay/>} />
                     <Route path="*"  element={<EmptyPage/>} /> //이건 제일밑에 적을것
                 </Routes>
-                {/*//Footerwㅏ리*/}
+                //Footerwㅏ리*/}
+
             </div>
         </BrowserRouter>
     );
