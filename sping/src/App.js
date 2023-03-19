@@ -1,49 +1,68 @@
 import './styles/App.css';
-// import Hello from "../src/component/Hello";
-// import Welcome from "../src/component/Welcome";
-// import styles from "./App.module.css";
-// import ChangeName from "./component/ChangeName";
-import DayList from "./components/DayList";
-import Day from "./components/Day";
-import Header from "./components/Header";
-import EmptyPage from "./components/EmptyPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CreateWord from "./components/CreateWord";
-import CreateDay from "./components/CreateDay";
+import React from "react";
+import Footer from "./Footer";
+import Section1 from "./pages/sections/Section1";
+import Section2 from "./pages/sections/Section2";
+import Section3 from "./pages/sections/Section3";
+import Section4 from "./pages/sections/Section4";
+import Navibar from "./pages/Navibar";
 function App() {
     return (
-        <BrowserRouter>
-            <div className="App">
-                <Header/>
-                <Routes>
-                    <Route path="/" element={<DayList/>} />
-                    <Route path="/day/:day" element={<Day/>} />
-                    <Route path="/create_word" element={<CreateWord/>} />
-                    <Route path="/create_day" element={<CreateDay/>} />
-                    <Route path="*"  element={<EmptyPage/>} /> //이건 제일밑에 적을것
-                </Routes>
-                {/*//Footerwㅏ리*/}
+    <body>
+    <Navibar/>
+    <header className="masthead">
+        <div className="container position-relative">
+            <div className="row justify-content-center">
+                <div className="col-xl-6">
+                    <div className="text-center text-white">
+                        <h1 className="mb-5">Generate more leads with a professional landing page!</h1>
+
+                        <form className="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <div className="row">
+                                <div className="col">
+                                    <input className="form-control form-control-lg" id="emailAddress" type="email"
+                                           placeholder="Email Address" data-sb-validations="required,email"/>
+                                    <div className="invalid-feedback text-white"
+                                         data-sb-feedback="emailAddress:required">Email Address is required.
+                                    </div>
+                                    <div className="invalid-feedback text-white"
+                                         data-sb-feedback="emailAddress:email">Email Address Email is not valid.
+                                    </div>
+                                </div>
+                                <div className="col-auto">
+                                    <button className="btn btn-primary btn-lg disabled" id="submitButton"
+                                            type="submit">Submit
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="d-none" id="submitSuccessMessage">
+                                <div className="text-center mb-3">
+                                    <div className="fw-bolder">Form submission successful!</div>
+                                    <p>To activate this form, sign up at</p>
+                                    <a className="text-white"
+                                       href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+
+                            <div className="d-none" id="submitErrorMessage">
+                                <div className="text-center text-danger mb-3">Error sending message!</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </BrowserRouter>
+        </div>
+    </header>
+    <Section1/>
+    <Section2/>
+    <Section3/>
+    <Section4/>
+    <Footer/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
     );
 }
-
-// <a
-//     className="App-link"
-//     href="https://reactjs.org"
-//     target="_blank"
-//     rel="noopener noreferrer"
-// >Node Home
-// </a>
-// <h1
-//     style={{
-//         color: "rgba(#f2f2f2",K
-//         borderRight : '2px solid #000',
-//         marginBottom : '50px',
-//         backgroundColor: "Blue"
-//     }}
-// >
-//     Helllo,{naver.name}
-// </h1>
-// <a href={naver.url}>{naver.name}</a>
 export default App;
