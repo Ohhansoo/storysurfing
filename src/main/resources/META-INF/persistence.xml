@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              version="2.1">
-    <persistence-unit name="post">
+    <persistence-unit name="sping">
+        <!-- 엔티티 -->
         <class>com.sping.old.Repository.Post</class>
+        <class>com.sping.job.domain.board.Board</class>
         <properties>
             <!-- 필수 속성 -->
+            <!-- DB Driver -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <!-- DB User Info -->
             <property name="javax.persistence.jdbc.user" value="admin"/>
             <property name="javax.persistence.jdbc.password" value="1q2w#e$rA"/>
+            <!-- DB url -->
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://43.201.122.223:3306/sping?characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
+            <!-- DB Dialect -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <!-- Option -->
+            <!-- SQL show -->
             <property name="hibernate.show_sql" value="true"/>
+
+            <!-- SQL 정렬 -->
             <property name="hibernate.format_sql" value="true"/>
+            <!-- SQL 관련 주석 처리 -->
             <property name="hibernate.use_sql_comments" value="true"/>
+            <!-- 실행 시 ddl 전략 -->
             <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>

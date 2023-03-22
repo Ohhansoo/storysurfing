@@ -1,13 +1,13 @@
 package com.sping.config;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
+//import javax.servlet.ServletContextEvent;
+//import javax.servlet.ServletContextListener;
+//import javax.servlet.annotation.WebListener;
 
-@WebListener
-public class MyContextListener implements ServletContextListener{
-
-    private SSHConnection sshConnection;
+//@WebListener
+//public class MyContextListener implements ServletContextListener{
+public class MyContextListener{
+/*    private SSHConnection sshConnection;
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
@@ -21,5 +21,5 @@ public class MyContextListener implements ServletContextListener{
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         sshConnection.closeSSH();
-    }
+    }*/
 }

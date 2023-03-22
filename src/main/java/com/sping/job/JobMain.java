@@ -1,28 +1,28 @@
-package com.sping.old.DataSource;
+package com.sping.job;
 
-import com.sping.old.Repository.Post;
-import com.sping.old.Repository.PostRepository;
+import com.sping.job.domain.board.Board;
+import com.sping.job.domain.board.BoardRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-public class JPAMain {
+public class JobMain {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("sping");
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
-        PostRepository postRepository;
+        BoardRepository boardRepository;
         tx.begin();
 
         try{
-            Post posts =new Post();
+            Board boards =new Board();
 
-            posts.setAuthor("ohoh");
-            posts.setContent("xml체인지");
-            posts.setTitle("ll");
-            em.persist(posts);
+            boards.setAuthor("오한수");
+            boards.setContent("되나??");
+            boards.setTitle("두번째 테스트");
+            em.persist(boards);
             em.flush();
             tx.commit();
 
