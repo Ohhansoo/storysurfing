@@ -1,7 +1,7 @@
 package com.sping.user.controller;
 
 import com.sping.old.DataSource.DTO.PostSaveRequestDTO;
-import com.sping.old.Repository.PostRepository;
+import com.sping.old.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

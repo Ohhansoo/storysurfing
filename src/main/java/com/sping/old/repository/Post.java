@@ -1,4 +1,4 @@
-package com.sping.old.Repository;
+package com.sping.old.repository;
 
 import jakarta.persistence.*;
 import lombok.Builder;

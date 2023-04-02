@@ -1,7 +1,7 @@
 package com.sping.old.DataSource;
 
-import com.sping.old.Repository.Post;
-import com.sping.old.Repository.PostRepository;
+import com.sping.old.repository.Post;
+import com.sping.old.repository.PostRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;

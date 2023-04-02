@@ -1,4 +1,4 @@
-package com.sping.old;
+package com.sping;
 
 import jakarta.annotation.PreDestroy;
 import org.springframework.boot.SpringApplication;

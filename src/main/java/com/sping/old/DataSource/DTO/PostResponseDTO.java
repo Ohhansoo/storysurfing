@@ -1,6 +1,6 @@
 package com.sping.old.DataSource.DTO;
 
-import com.sping.old.Repository.Post;
+import com.sping.old.repository.Post;
 
 public class PostResponseDTO {
     private Long id;
