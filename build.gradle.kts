@@ -19,17 +19,20 @@ configurations {
 repositories {
 	mavenCentral()
 }
+project.ext {
+	querydslVersion = dependencyManagement.importedProperties['querydsl.version']
+}
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
-	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0")
-	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
+	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity5")
 	implementation("mysql:mysql-connector-java:8.0.28")
 //	implementation("mysql:mysql-connector-java")
 	testImplementation("junit:junit:4.13.1")
@@ -55,9 +58,38 @@ dependencies {
 	testImplementation("org.junit.platform:junit-platform-launcher:1.5.2")
 	testImplementation("org.junit.jupiter:junit-jupiter:5.5.2")
 
+	// Querydsl
+	implementation ("com.querydsl:querydsl-jpa")
+	implementation ("com.querydsl:querydsl-collections")
+	annotationProcessor ("com.querydsl:querydsl-apt:${project.querydslVersion}:jpa") // querydsl JPAAnnotationProcessor 사용 지정
+	annotationProcessor ("jakarta.annotation:jakarta.annotation-api") // java.lang.NoClassDefFoundError (javax.annotation.Generated) 발생 대응
+
+
+}
+test {
+	useJUnitPlatform()
 }
 
+//// Querydsl 설정부
+def generated = 'src/main/generated'
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+	options.getGeneratedSourceOutputDirectory().set(file(generated))
+}
+
+sourceSets {
+	val generated
+	main.java.srcDirs += [ generated ]
+}
+
+// gradle clean 시에 QClass 디렉토리 삭제
+clean {
+	delete file(generated)
+}
+//// Heroku 설정
+jar {
+	manifest {
+		attributes('Main-Class': 'com.uno.getinline.GetInLineApplication')
+	}
 }

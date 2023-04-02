@@ -2,6 +2,7 @@ package com.sping.domain4.dto;
 
 import com.sping.domain4.constant.ErrorCode;
 import lombok.*;
+
 @Getter
 @ToString
 @EqualsAndHashCode
@@ -27,4 +28,5 @@ public class ApiErrorResponse {
     public static ApiErrorResponse of(Boolean success, ErrorCode errorCode, String message) {
         return new ApiErrorResponse(success, errorCode.getCode(), errorCode.getMessage(message));
     }
+
 }
