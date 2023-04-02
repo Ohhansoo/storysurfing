@@ -20,7 +20,7 @@ repositories {
 	mavenCentral()
 }
 project.ext {
-	querydslVersion = dependencyManagement.importedProperties['querydsl.version']
+//	querydslVersion = dependencyManagement.importedProperties['querydsl.version']
 }
 
 dependencies {
@@ -61,35 +61,35 @@ dependencies {
 	// Querydsl
 	implementation ("com.querydsl:querydsl-jpa")
 	implementation ("com.querydsl:querydsl-collections")
-	annotationProcessor ("com.querydsl:querydsl-apt:${project.querydslVersion}:jpa") // querydsl JPAAnnotationProcessor 사용 지정
+//	annotationProcessor ("com.querydsl:querydsl-apt:${project.querydslVersion}:jpa") // querydsl JPAAnnotationProcessor 사용 지정
 	annotationProcessor ("jakarta.annotation:jakarta.annotation-api") // java.lang.NoClassDefFoundError (javax.annotation.Generated) 발생 대응
 
 
 }
-test {
-	useJUnitPlatform()
-}
-
-//// Querydsl 설정부
-def generated = 'src/main/generated'
-
-tasks.withType<Test> {
-	useJUnitPlatform()
-	options.getGeneratedSourceOutputDirectory().set(file(generated))
-}
-
-sourceSets {
-	val generated
-	main.java.srcDirs += [ generated ]
-}
-
-// gradle clean 시에 QClass 디렉토리 삭제
-clean {
-	delete file(generated)
-}
-//// Heroku 설정
-jar {
-	manifest {
-		attributes('Main-Class': 'com.uno.getinline.GetInLineApplication')
-	}
-}
+//test {
+//	useJUnitPlatform()
+//}
+//
+////// Querydsl 설정부
+//def generated = 'src/main/generated'
+//
+//tasks.withType<Test> {
+//	useJUnitPlatform()
+//	options.getGeneratedSourceOutputDirectory().set(file(generated))
+//}
+//
+//sourceSets {
+//	val generated
+//	main.java.srcDirs += [ generated ]
+//}
+//
+//// gradle clean 시에 QClass 디렉토리 삭제
+//clean {
+//	delete file(generated)
+//}
+////// Heroku 설정
+//jar {
+//	manifest {
+//		attributes('Main-Class': 'com.uno.getinline.GetInLineApplication')
+//	}
+//}
