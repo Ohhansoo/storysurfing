@@ -1,1 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.201.122.223:3306/sping?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: admin
+    password: 1q2w#e$rA
+  devtools.livereload.enabled: true # 정적 리소스에 변화가 있을 때 바로 반영한다.
+  thymeleaf:
+    prefix: classpath:/templates/ # thymeleaf 참조 경로
+    suffix: .html # thymeleaf 참조 경로
+    cache: false # thymeleaf에 대한 캐시를 남기지 않는다. cache=false 설정(운영시는 true)
+    check-template-location: true # templates 디렉토리에 파일이 있는지 없는지 체크, 없으면 에러를 발생시킨다.
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.springframework: debug
+    org.springframework.web: debug
+
+
+
+
+
+
 
